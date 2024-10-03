@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom hover scale, if needed globally, rename it */
+.custom-hover-scale-105 {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+/* Tailwind shadow already exists, this is optional */
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s ease-out;
+  /* Reduced to 0.8s for better UX */
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+  /* Reduced to 0.8s */
+}
+
+/* Button bounce animation */
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1.8s infinite;
+  /* Slightly reduced to 1.8s for better loop */
+}
+
+
+
+/* Core Element Hover Effect */
+.core-element {
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease, transform 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.core-element:hover {
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+}
+
+.core-element:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  /* Add a dark overlay on hover */
+  z-index: 1;
+}
+
+.core-element h2,
+.core-element p {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+  /* Transition for text color */
+}
+
+.core-element:hover h2 {
+  color: white;
+  /* Change text color on hover */
+}
+
+.core-element:hover p {
+  color: lightgray;
+  /* Change description text color */
+}
