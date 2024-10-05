@@ -85,17 +85,17 @@ const Home = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                         {/* Water Element */}
                         <Link to="/water-element" className="bg-white shadow-lg p-6 rounded-lg hover:bg-cover" style={{
-                            backgroundImage: 'none',
+                            backgroundImage: 'coreWaterBg',
                             transition: 'background-image 0.5s ease-in-out'
                         }}
                             onMouseEnter={e => e.currentTarget.style.backgroundImage = `url(${coreWaterBg})`}
                             onMouseLeave={e => e.currentTarget.style.backgroundImage = 'none'}>
                             <h2 className="text-xl font-semibold text-green-600">Water</h2>
-                            <p className="mt-2 text-gray-600">Ensure access to clean water and promote conservation.</p>
+                            <p className="mt-2 text-gray-600">Ensure  access to clean water and promote conservation.</p>
                         </Link>
 
                         {/* Waste Element */}
-                        <Link to="/waste-management" className="bg-white shadow-lg p-6 rounded-lg hover:bg-cover" style={{
+                        <Link to="/waste-element" className="bg-white shadow-lg p-6 rounded-lg hover:bg-cover" style={{
                             backgroundImage: 'none',
                             transition: 'background-image 0.5s ease-in-out'
                         }}
@@ -106,7 +106,7 @@ const Home = () => {
                         </Link>
 
                         {/* Energy Element */}
-                        <Link to="/energy" className="bg-white shadow-lg p-6 rounded-lg hover:bg-cover" style={{
+                        <Link to="/energy-element" className="bg-white shadow-lg p-6 rounded-lg hover:bg-cover" style={{
                             backgroundImage: 'none',
                             transition: 'background-image 0.5s ease-in-out'
                         }}
@@ -117,7 +117,7 @@ const Home = () => {
                         </Link>
 
                         {/* Biodiversity Element */}
-                        <Link to="/biodiversity" className="bg-white shadow-lg p-6 rounded-lg hover:bg-cover" style={{
+                        <Link to="/biodiversity-element" className="bg-white shadow-lg p-6 rounded-lg hover:bg-cover" style={{
                             backgroundImage: 'none',
                             transition: 'background-image 0.5s ease-in-out'
                         }}
@@ -320,7 +320,7 @@ const Home = () => {
                             <p>
                                 <span className="font-bold">Location:</span>
                                 <a
-                                    href="https://www.google.com/maps/place/Pune,+MH,+IN"
+                                    href="https://www.google.com/maps/dir//Silver+Nest+Building+Viman+Nagar+Rd+Sainik+Nagar,+Clover+Park,+Viman+Nagar+Pune,+Maharashtra+411014/@18.5658159,73.9180478,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bc2c1469c02be73:0xb88130aa301b6c8e!2m2!1d73.9180478!2d18.5658159?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-blue-600 underline ml-1"
